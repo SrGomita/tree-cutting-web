@@ -1,0 +1,59 @@
+// About Page
+.about-hero {
+  position: relative;
+  padding: 4rem 15rem;
+  text-align: center;
+  color: white;
+  min-height: 400px;
+  overflow: hidden;
+
+  // Fondo con imagen y overlay gris suave semitransparente
+  background:
+    linear-gradient(rgba(156, 233, 109, 0.7), rgba(220,220,220,0.7)),
+    url('../resources/img/img9.png') center center/cover no-repeat;
+
+  &:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    filter: blur(4px) brightness(0.7); // Ajusta el blur si lo deseas
+    z-index: 0;
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+}
+  .mission-vision {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15rem;
+    padding: 4rem 15rem;
+    background: @light-bg;
+  
+    .mission, .vision {
+      padding: 2rem;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      h2{
+          text-align: center;
+      }
+    }
+  }
+  
+  .team-section {
+    padding: 4rem 2rem;
+    text-align: center;
+  
+    .team-img {
+      img {
+        max-width: 60vw;
+        max-height: 50vh;
+        margin-top: 1rem;
+        border-radius: 8px;
+      }
+    }
+  }
