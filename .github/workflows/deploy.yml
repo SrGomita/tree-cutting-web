@@ -1,4 +1,4 @@
-name: Deploy Proyecto CRIOHO.
+name: Deploy Proyecto tree-cutting-web.
 
 on:
   push:
