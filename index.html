@@ -9,9 +9,9 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  {{> header }}
+  <div id="header">
 
-  {{> carousel }}
+  </div>
 
   <!-- Welcome Section -->
   <section class="container py-5">
@@ -104,8 +104,19 @@
     </div>
   </section>
 
-  {{> footer }}
+  <div id="footer"></div>
 
+  <script>
+    // Cargar el header
+    fetch('partials/header.html')
+      .then(res => res.text())
+      .then(html => document.getElementById('header').innerHTML = html);
+
+    // Cargar el footer
+    fetch('partials/footer.html')
+      .then(res => res.text())
+      .then(html => document.getElementById('footer').innerHTML = html);
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/main.js"></script>
 </body>
